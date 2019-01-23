@@ -1,0 +1,126 @@
+<div class="container">
+<form [formGroup]="employee" name = "employee" class="form-vertical" style="width:50%;margin:0 auto;" >
+        
+        <div class="form-group" [ngClass]="{'has-error':employee.get('fname').errors && (employee.get('fname').touched || employee.get('fname').dirty )}">
+               <div class="row">
+                  
+           <label for="exampleInputEmail1">First Name:</label>
+          
+                   <input class="form-control"  id="fname" formControlName="fname" type="text" placeholder="Name here" />
+                   
+                   <span *ngIf="employee.get('fname').errors && (employee.get('fname').touched || employee.get('fname').dirty )">
+           <span *ngIf="employee.get('fname').errors.required" class="text-danger"  >
+               Enter First Name
+           </span>
+           <span *ngIf="employee.get('fname').errors.minlength || employee.get('fname').errors.maxlength" class="text-danger" >
+              Last Name shoud be great than 2 and less than 10
+           
+           </span>
+           </span>
+       
+       </div>   </div>
+       
+       
+       
+             
+           <div class="form-group" [ngClass]="{'has-error':employee.get('lname').errors && 
+           (employee.get('lname').touched || employee.get('lname').dirty )}">
+           <div class="row">
+                          
+               <label for="exampleInputEmail1">Last Name:</label>
+               
+                       <input class="form-control"  id="lname" formControlName="lname" type="text" placeholder="Name here" />
+                        
+                       <span *ngIf="employee.get('lname').errors && (employee.get('lname').touched || employee.get('lname').dirty )">
+               <span *ngIf="employee.get('lname').errors.required" class="text-danger"  >
+                   Enter First Name
+               </span>
+               <span *ngIf="employee.get('lname').errors.minlength || employee.get('lname').errors.maxlength" class="text-danger">
+                  Last Name shoud be great than 2 and less than 10
+               
+               </span>
+               </span>
+           </div>
+           </div>
+               
+       
+         
+               <div class="form-group" [ngClass]="{'has-error':employee.get('mail').errors && (employee.get('mail').touched || employee.get('mail').dirty )}">
+                       <div class="row">
+                                       
+                               <label for="exampleInputEmail1">Mail:</label> 
+                              
+           <input id="mail" class="form-control" formControlName="mail" placeholder="Mail here" type="text"/>
+           
+           <span *ngIf="employee.get('mail').errors && (employee.get('mail').touched || employee.get('mail').dirty )">
+           <span *ngIf="employee.get('mail').errors.email" class="text-danger"  class="text-danger">
+               Enter Valid Mail Address
+           
+           </span>
+       </span>
+       </div>
+       </div>  
+       
+       
+       
+       <!--
+           <international-phone-number [(ngModel)]="phone_number"  [ngModelOptions]="{standalone: true}" placeholder="Enter phone number" [maxlength]="20" [defaultCountry]="'in'" [required]="true" #phoneNumber="ngModel" name="phone_number" [allowedCountries]="['in']"></international-phone-number>
+       -->
+       
+       
+            
+           <div [ngClass]="{'has-error':employee.get('phone').errors && (employee.get('phone').touched || employee.get('phone').dirty )}">
+               <div class="row">
+                                       
+                   <label for="exampleInputEmail1">Phone Number: </label> 
+               <input id="phone" class="form-control" formControlName="phone" type="text" placeholder="10 digits without any extensions" />
+       <span *ngIf="employee.get('phone').errors && (employee.get('phone').touched || employee.get('phone').dirty )">
+       <span *ngIf="employee.get('phone').errors.required"  class="text-danger">
+           Enter Phone number
+       </span>
+       <span *ngIf="employee.get('phone').errors.min || employee.get('phone').errors.max"  class="text-danger">
+           Enter valid phone number,without any extensions!
+       
+       </span>
+       </span>
+       </div></div>
+       
+
+
+       <div class="row">
+            <label>Birthdate:</label>
+                    <div class="form-control" [ngClass]="{'has-error':employee.get('birthdate').errors && (employee.get('birthdate').touched || employee.get('birthdate').dirty )}">
+                <input id="birthdate" formControlName="birthdate"  type="date"/>
+                <span *ngIf="employee.get('birthdate').errors && (employee.get('birthdate').touched || employee.get('birthdate').dirty )">
+                <span *ngIf="employee.get('birthdate').errors.required"  class="text-danger">
+                    Please choose a date
+                    
+                </span>
+                </span>
+                </div>
+            </div>
+
+            <br />
+            <div class="row">
+
+      
+    <div class="col-md-12 text-center">
+  <button type="button" name="submit" (click)="submit()" class="btn btn-primary">Validate</button>&nbsp;
+ 
+
+  <button name="cancelbutton" (click)="cancelupdate()" class="btn btn-danger">Cancel</button>
+</div> 
+</div>
+
+
+  </form> 
+</div>
+  
+<!--
+  <div *ngIf="employee.valid">
+
+</div>
+
+
+
+-->

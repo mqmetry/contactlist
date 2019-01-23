@@ -1,0 +1,70 @@
+{
+  "students": [
+    {
+      "birthdate": "2019-01-31",
+      "city": "Surendranagar",
+      "country": "India",
+      "fname": "Xyz",
+      "lname": "ABAB",
+      "mail": "mihir@gmail.com",
+      "phone": "9898989898",
+      "state": "Gujarat",
+      "id": 6
+    },
+    {
+      "birthdate": "1997-01-327",
+      "city": "Pune",
+      "country": "India",
+      "fname": "Abc",
+      "lname": "Xyz",
+      "mail": "mihir@gmail.com",
+      "phone": "8989898989",
+      "state": "Maharashtra",
+      "id": 7
+    },
+    {
+      "fname": "ASASASASAS",
+      "lname": "erer",
+      "mail": "mihir@gmail.com",
+      "phone": "9090909090",
+      "country": "India",
+      "state": "Madhya Pradesh",
+      "city": "Indore",
+      "birthdate": "1990-11-11",
+      "id": 8
+    },
+    {
+      "fname": "oldperson",
+      "lname": "surname",
+      "mail": "mihir@gmail.in",
+      "phone": "8487848744",
+      "birthdate": "2019-01-30",
+      "city": "Ahmedabad",
+      "state": "Gujarat",
+      "country": "India",
+      "id": 11
+    },
+    {
+      "fname": "asc",
+      "lname": "asdf",
+      "mail": "dfa@mmm.in",
+      "phone": "8888888888",
+      "country": "India",
+      "state": "Gujarat",
+      "city": "Rajkot",
+      "birthdate": "2019-01-17",
+      "id": 12
+    },
+    {
+      "fname": "what you ",
+      "lname": "think",
+      "mail": "think@gnail.com",
+      "phone": "8888888888",
+      "country": "India",
+      "state": "Gujarat",
+      "city": "Rajkot",
+      "birthdate": "2019-01-16",
+      "id": 13
+    }
+  ]
+}
