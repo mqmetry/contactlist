@@ -15,6 +15,7 @@ export class MyservService {
     this.bufferobject2=new Student();}
   temp:any;
   updateid :number=0;
+  deleteid:number=0;
   bufferobject:Student;
  bufferobject2:Student;
   url:string ="http://localhost:3000/students";

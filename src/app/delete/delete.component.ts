@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MyservService } from '../myserv.service';
 
 @Component({
   selector: 'app-delete',
@@ -8,16 +9,13 @@ import { Router } from '@angular/router';
 })
 export class DeleteComponent implements OnInit {
 
-  constructor(private _router: Router) { }
+  constructor(private _router: Router,private tempservice:MyservService) {
+    if(this.tempservice.deleteid===0){this._router.navigate(['contacts']);}
+   }
 
   
   ngOnInit() {
-    this._router.navigate(['contacts']);
+    this.tempservice.deleteid=0;
+    setTimeout(()=>{this._router.navigate(['contacts']);},1000);
   }
-
-
-
-}
-async function delay(ms: number) {
-  
 }

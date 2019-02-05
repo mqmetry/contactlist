@@ -1,18 +1,21 @@
 <div class="container">
 <div *ngIf="tempdata;else elsenodata"> 
+  
     <div>
-      
+        <div class="col-xs-4">
         <label>Search Data:&nbsp;</label>
-       
+        
          <input type="text"  [(ngModel)]="searchstring" placeholder="Type here..."/>
+        </div>
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <button class="btn-success" (click)="exportAsXLSX()"  title="Export data as Microsoft Excel file">
+        
+         <button class="btn-success" type="submit" (click)="exportAsXLSX()"  title="Export data as .xlsx file">
           Export data
         </button>
        
       </div>
 <table class="table table-hover">
-    <thead>
+    <thead> 
       <tr>
           <th>First Name</th>
           <th>Last Name</th>
@@ -38,8 +41,8 @@
           <td>{{data.state}}</td>
           <td>{{data.city}}</td>
           <td>{{data.birthdate}}</td>
-          <td><button class="btn btn-primary" name = "updatebutton" (click)="updatecall(data.id)">Update</button></td>
-          <td><button  class="btn btn-danger" data-toggle="modal" (click)="getnames(data.fname,data.lname,data.id)" data-target="#myModal">Delete</button></td>
+          <td><button type="submit" class="btn btn-primary" name = "updatebutton" (click)="updatecall(data.id)">Update</button></td>
+          <td><button type="submit"  class="btn btn-danger" data-toggle="modal" (click)="getnames(data.fname,data.lname,data.id)" data-target="#myModal">Delete</button></td>
 
           
 </tr>
@@ -51,14 +54,14 @@
       <div class="modal-content">
         <div class="modal-header">
             
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <button type="submit" class="close" data-dismiss="modal">&times;</button>
           <br/>
         </div>
         <div class="modal-body">
           <p>Are you sure you want to delete the data of: {{tfname + " " + tlname}}</p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal" 
+          <button type="submit" class="btn btn-primary" data-dismiss="modal" 
           (click)="deletecall(tid)">Delete</button>
         </div>
       </div>

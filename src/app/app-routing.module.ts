@@ -7,7 +7,7 @@ import {  DeleteComponent } from './delete/delete.component';
 
 
 const routes: Routes = [
-  {path:'',redirectTo: '/contacts', pathMatch: 'full' },
+  {path:'',component:ContactsComponent},
   {path:'contacts',component:ContactsComponent},
   {path:'addnewcontact',component:AddcontactComponent},
   {path:'updatecontact',component:UpdateComponent},
@@ -20,3 +20,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+ 

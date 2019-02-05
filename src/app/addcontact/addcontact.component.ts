@@ -91,7 +91,7 @@ submit():void{
     this.tempcity = this._dataService.getStates().filter((item)=> item.countryid == this.mycountry).filter((item)=> item.id == this.selectedcityid);
     this.bufferobject.city=this.tempcity[0].name;
     this.bufferobject.birthdate = this.employee.get("birthdate").value.toString();
-    this.myservice.createstudent(this.bufferobject).subscribe(data => {console.log(data);this._router.navigate(['contacts']);});
+    this.myservice.createstudent(this.bufferobject).subscribe(data => {this._router.navigate(['contacts']);});
    }  
 
 

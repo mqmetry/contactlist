@@ -105,22 +105,12 @@
 
       
     <div class="col-md-12 text-center">
-  <button type="button" name="submit" (click)="submit()" class="btn btn-primary">Validate</button>&nbsp;
+            <span *ngIf="employee.valid">
+  <button type="submit" name="submit" (click)="submit()" class="btn btn-primary">Validate</button>&nbsp;
  
+            </span>
+  <button name="cancelbutton" type="submit" (click)="cancelupdate()" class="btn btn-danger">Cancel</button>
 
-  <button name="cancelbutton" (click)="cancelupdate()" class="btn btn-danger">Cancel</button>
 </div> 
+</div></form>  
 </div>
-
-
-  </form> 
-</div>
-  
-<!--
-  <div *ngIf="employee.valid">
-
-</div>
-
-
-
--->

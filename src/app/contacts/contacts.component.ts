@@ -40,6 +40,7 @@ updatecall(i:number){
   
 }
 deletecall(i:number){
+  this.tempservice.deleteid=i;
   this.tempservice.Deletestudent(i).subscribe((data)=>{this._router.navigate(['deletecomponent']);});
 }
 
